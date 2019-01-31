@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131090856-2"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'UA-131090856-2');
+</script>
+
+  <title>ケアきょう</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  {% load static %}
+  <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,800|Istok+Web|Noto+Sans+JP|Ubuntu:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <style type="text/css">
+  body { background-color: #f7f7f7; font-family: 'Istok Web', 'Noto Sans JP', sans-serif; color: #212529; }
+  main { margin-top: 80px; margin-bottom: 100px; text-align: center; }
+  header.jumbotron {
+    background: url("/static/posts/hero.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 500;
+  }
+  header .container { margin-top: 7%; margin-bottom: 7%; }
+  .mb-80 { margin-bottom: 80px; }
+  h1 {line-height: 2em; letter-spacing: 0.05em;}
+  @media screen and (max-width:767px) {
+    /*　画面サイズが767px以下の場合読み込む　*/
+    h1 { font-size:18pt;}
+  }
+  a:hover { text-decoration: none; }
+  a:hover img { transition: opacity .3s; opacity: 0.7; filter: alpha(opacity=70); -ms-filter: "alpha(opacity=70)"; }
+  a:hover h5 { transition: color .3s; color: #777; }
+  .about-text { line-height: 1.7em; letter-spacing: 1.2pt; }
+  .about-text i { background: linear-gradient(#f7f7f7 50%,#ff0); font-weight: 700; font-style: normal; }
+  .main-copy { font-size: 2em; font-family: 'Ubuntu', sans-serif; margin: 0; padding: 10px;  border-bottom: 4px solid #212529; display: inline-block; letter-spacing: .05em; }
+  .main-text { margin: 20px auto 50px; font-weight: bold; letter-spacing: .05em; }
+  .navbar-brand { font-family: 'M PLUS 1p', sans-serif; font-weight: 800; font-size: 1.3rem; }
+  .nav-link { color: #fff !important; font-size: 1rem; }
+  .navbar-nav { flex-direction: unset; }
+  .sns { 
+    margin-right: 10px;
+    padding-top: 6px;
+    width: 30px;
+    height: 30px;
+    background: #ffb03f;
+    border-radius: 15px;
+    text-align-last: center;
+    vertical-align: middle;  }
+  .card { border: none; border-radius:0; text-align: justify; margin-bottom:30px; }
+  .card-img-top { height: 225px; object-fit: cover; border-radius:0; }
+  .card-body { padding:30px; height: 320px; overflow: hidden; }
+  .card-title { color: #212529; font-weight: 700; line-height: 1.6; }
+  .card-text { color: #666; }
+  .card-text a:hover { color: #666; }
+  .text-muted { font-weight: bold; font-size: 80%; letter-spacing: 0.05em; margin-bottom: 12px; }
+  .text-muted span { color: #ffb03f; }
+  .more {
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+    margin: 0 !important;
+    padding: 70px 0 30px;
+    color: #999;
+    font-weight: bold;
+    font-size: 80%;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #fff, #fff);
+    }
+  .footer {
+    padding: 40px 0;
+    width: 100%;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 80%;
+    color: #666;
+    text-align: center;
+  }
+  .footer a { color: #666; text-decoration: underline;}
+  </style>  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a href="{% url 'posts:index' %}" class="navbar-brand"><i class="far fa-grin-alt fa-lg" style="color: #ffb03f; "></i> ケアきょう</a>
+      <!-- <ul class="navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-grin-alt"></i> News</a></li>
+      </ul> -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link sns" href="https://www.facebook.com/CareKyo/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link sns" href="https://twitter.com/carekyo">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="jumbotron">
+    <div class="container">
+      <h1>ケアワーカーによる<br>ケアワーカーのための<br>応援サイト</h1>
+    </div>
+  </header>
+
+  <main role="main" class="container">
+    <div class="container mb-80"  >
+      <h2 class="main-copy">About Us</h2>
+      <p class="main-text">ケアきょうとは</p>
+      {% load static %} <img class="mb-5" src="{% static 'posts/about.gif'%}"/>
+      <p class="about-text"><i>ケアワーカーによるケアワーカーのための</i>応援サイトです。<br>
+      「ケアきょう」は、ケアワーカー同士でスキルアップや<br>キャリアアップの<i>情報交換が出来るサイト</i>を目指しています。<br>
+      また、プロのアドバイザーによる、<i>メンタルケア・転職サポート</i>も随時行っています。</p>
+    </div>
+
+    <div class="container">
+      <h2 class="main-copy">News & Topics</h2>
+      <p class="main-text">元気で楽しい介護生活を送るための情報を配信しています</p>
+      <div class="row"> {% for post in posts.all %}
+        <div class="col-sm-4">
+          <a href="{% url 'post_detail' post.id %}">
+            <div class="card"><img src="{{ post.image.url}}" class="card-img-top"/>
+              <div class="card-body">
+                <p class="text-muted">{{ post.published|date:"Y.m.d / " }}<span>NEWS</span></p>
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text"> {{ post.summary }} </p>
+                <p class="more">もっと読む</p>
+              </div>
+            </div>
+          </a>
+        </div> {% endfor %}
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="mb-0">Copyright © 2019 <a href="https://kaigomedia.co.jp/">株式会社カイゴメディア</a> All Rights Reserved</p>
+  </footer>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
