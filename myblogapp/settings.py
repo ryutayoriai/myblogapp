@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0e-8-1aqndxx22i#v+!(n=vdn!6xk_^c2pn0h*)ec$4x8fkow3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['52.69.7.213','.carekyo.com.','carekyo.com',]
+ALLOWED_HOSTS = ['127.0.0.1', '52.69.7.213','.carekyo.com.','carekyo.com',]
 
 # Application definition
 
@@ -82,16 +82,19 @@ WSGI_APPLICATION = 'myblogapp.wsgi.application'
 
 DATABASES = {
     'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME':'myblogapp',
-        'USER':'mybloguser',
-#        'PASSWORD':'p@ssword',
-        'PASSWORD':'Passw0rd1',
-#        'HOST':'localhost',
-        'HOST':'myblogapp.c6u0bhzbqqfv.ap-northeast-1.rds.amazonaws.com',
-        'PORT':'',
+        # 'ENGINE':'django.db.backends.postgresql_psycopg2',
+        # 'NAME':'myblogapp',
+        # 'USER':'mybloguser',
+        # 'PASSWORD':'Passw0rd1',
+        # 'HOST':'myblogapp.c6u0bhzbqqfv.ap-northeast-1.rds.amazonaws.com',
+        # 'PORT':'',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myblogapp',
+        'USER': 'myblogapp',
+        'PASSWORD': 'dragonta',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
