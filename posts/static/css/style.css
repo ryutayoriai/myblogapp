@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/* 基本のスタイル */
+html{
+  font-family: 'Istok Web', 'Noto Sans JP', sans-serif;
+}
+body {
+  background-color: #f7f7f7;
+  color: #212529;
+}
+h1 {
+  line-height: 2em;
+  letter-spacing: 0.05em;
+}
+@media screen and (max-width:767px) {
+  /* 画面サイズが767px以下の場合読み込む */
+  h1 {
+    font-size:18pt;
+  }
+}
+a:hover {
+  text-decoration: none;
+}
+a:hover img {
+  transition: opacity .3s;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)";
+  }
+a:hover h5 {
+  transition: color .3s;
+  color: #777;
+}
+.mb-80 {
+  margin-bottom: 80px;
+}
+nav .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-brand {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.nav-link {
+  color: #fff !important;
+  font-size: 1rem;
+}
+.navbar-nav {
+  flex-direction: unset;
+}
+.sns { 
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  background: #ffb03f;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 15px;
+}
+main {
+  margin-top: 80px;
+}
+@media screen and (max-width:767px) {
+  /* 画面サイズが767px以下の場合読み込む */
+  main {
+    margin-top: 50px;
+  }
+}
+.footer {
+  padding: 40px 0;
+  width: 100%;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 80%;
+  color: #666;
+  text-align: center;
+}
+.footer a {
+  color: #666;
+  text-decoration: underline;
+}
+
+/* indexページ */
+.top-box {
+  margin-bottom: 100px;
+  text-align: center;
+}
+header.jumbotron {
+  background: url("/static/posts/hero.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  color: #fff;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 500;
+  border-radius: 0;
+}
+@media screen and (max-width:767px) {
+  /* 画面サイズが767px以下の場合読み込む */
+  header.jumbotron {
+    background-attachment: scroll;
+  }
+}
+header .container {
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+.about-text {
+  line-height: 1.7em;
+}
+.about-text i {
+  background: linear-gradient(#f7f7f7 30%,#ff0);
+  font-weight: 700;
+  font-style: normal;
+}
+.main-copy {
+  font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 4px solid #212529;
+  display: inline-block;
+  letter-spacing: .05em;
+}
+.main-text {
+  margin: 20px auto 50px;
+  font-weight: bold;
+  letter-spacing: .05em;
+}
+.card {
+  border: none;
+  border-radius:0;
+  text-align: justify;
+  margin-bottom:30px;
+}
+.card-img-top {
+  height: 225px;
+  object-fit: cover;
+  border-radius:0;
+}
+.card-body {
+  padding:30px;
+  height: 320px;
+  overflow: hidden;
+}
+.card-title {
+  color: #212529;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.card-text {
+  color: #666;
+}
+.card-text a:hover {
+  color: #666;
+}
+.text-muted {
+  font-weight: bold;
+  font-size: 80%;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.text-muted span {
+  color: #ffb03f;
+}
+.more {
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  margin: 0 !important;
+  padding: 70px 0 30px;
+  color: #999;
+  font-weight: bold;
+  font-size: 80%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #fff, #fff);
+  }
+
+/* postページ */
+.post-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px 64px;
+}
+@media screen and (max-width:767px) {
+  /* 画面サイズが767px以下の場合読み込む */
+  .post-box {
+    border-radius: 0;
+    padding: 40px 20px;
+  }
+}
+.post-title {
+  font-weight: 700;
+  line-height: 1.6;
+}
+@media screen and (max-width:767px) {
+  /* 画面サイズが767px以下の場合読み込む */
+  h2 {
+    font-size:20pt;
+    line-height: 1.2;
+  }
+}
+.post-img {
+  text-align: center;
+}
+.post-muted {
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  text-align: right;
+}
+.post-text {
+  font-size:17px;
+  line-height: 1.9;
+}
+.back-top {
+  font-size:18px;
+  font-weight: bold;
+  text-align: center;
+}
+.back-top a{
+  color: #ffb03f;
+}
+
+/* markup */
+.post-title span {
+  font-size: 80%;
+}
+.post-text h3 {
+  margin: 60px 0 15px;
+  padding: 5px 0;
+  font-size: 28px;
+  font-weight: 700;
+  border-bottom: 2px solid #212529;
+}
+.post-text h4 {
+  margin: 56px 0 20px;
+  padding: 13px 28px 12px;
+  font-size: 21px;
+  font-weight: 700;
+  background: #f3f3f3;
+  border-radius: 10px;
+}
+.post-text h5 {
+  margin: 34px 0 11px;
+  padding: 0 0 0 16px;
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+}
+.post-text h5:before {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: '';
+  width: 4px;
+  height: calc(100%);
+  background: #212529;
+  border-radius: 3px;
+}
+.post-text h6 {
+  margin: 34px 0 11px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.post-text a {
+  text-decoration: underline;
+  color: #3c86d3;
+}
+.post-text strong {
+  background: linear-gradient(#fff 30%,#ff0);
+}
+table {
+  border-collapse:  collapse;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+thead th, thead td {
+  padding: 5px;
+  background: #ffb03f;
+  color :#fff;
+  text-align: center
+}
+thead th {
+  border-right: solid 1px #fff;
+  letter-spacing: 0.05em;
+}
+thead th:last-child {
+  border-right: solid 1px #ffb03f;
+}
+tbody th {
+  color: #ffb03f;
+  background: #fff5e5;
+  text-align: center;
+}
+tbody th,tbody td {
+  border: solid 1px #ffb03f;
+  padding: 5px;
+}
+
+blockquote {
+  position: relative;
+  padding: 10px 10px 10px 32px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  font-style: italic;
+  background: #f3f3f3;
+}
+blockquote:before{
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  left: -15px;
+  vertical-align: middle;
+  content: "“";
+  font-family: sans-serif;
+  color: #f3f3f3;
+  font-size: 70px;
+  line-height: 1;
+  z-index: 2;
+}
+blockquote:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  border-width: 0 0 40px 40px;
+  border-style: solid;
+  border-color: transparent #fff;
+}
+blockquote p {
+  position: relative;
+  padding: 0;
+  margin: 10px 0;
+  z-index: 3;
+}
+.notes{
+  font-size: 0.85em;
+  padding-left: 1em;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.notes:before{
+  content: "※";
+}
+.notes:first-letter{
+  margin-left: -1.3em;
+}
+.post-text > ul{
+  font-size: 16px;
+}
+.post-text > ul li{
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  margin-left: -20px;
+}
+.post-text > ul li:before {
+  content: "";
+  position: absolute;
+  top: .55em;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb03f;
+  border-radius: 50%;
+}
+.post-text > ol {
+  font-size: 16px;
+  counter-reset: my-counter;
+  list-style: none;
+}
+.post-text > ol li {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  position: relative;
+}
+.post-text > ol li:before {
+  content: counter(my-counter);
+  counter-increment: my-counter;
+  background-color: #ffb03f;
+  color: #fff;
+  display: block;
+  float: left;
+  line-height: 22px;
+  margin-top: 4px;
+  margin-left: -30px;
+  text-align: center;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+}
+.movie-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 0;
+  overflow: hidden;
+}
+.movie-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.prettyprint ol.linenums > li {
+  list-style-type: decimal; 
+  padding-left: 20px;
+  border-left: 1px solid #75715e;
+}
+pre.prettyprint {
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 40px 24px;
+  margin-bottom: 4rem;
+  border-radius: 10px;
+  white-space: pre;
+  overflow: auto;
+}
